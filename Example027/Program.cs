@@ -4,12 +4,16 @@
 Console.WriteLine("Введите, пожалуйста, число");
 int number = Convert.ToInt32(Console.ReadLine());
 
-int sum = 0;
-while (number > 0)
+int Sum(int num)
 {
-    int i = number % 10;
-    number = number / 10;
-    sum = sum + i;
+    int res = 0;
+    while (num > 0)
+    {
+        int i = num % 10;
+        num = num / 10;
+        res = res + i;
+    }
+    return res;
 }
 
-Console.WriteLine("Сумма цифр в числе = " + sum);
+Console.WriteLine("Сумма цифр в числе = " + Sum(number));
